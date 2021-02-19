@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algo</title>
+</head>
+
+<body>
+    <script>
+        // var array = [5, 1, 22, 25, 6, -1, 8, 10];
+        // var sequence = [5, 1, 25, 22, 6, -1, 8, 10];
+        var array = [1, 1, 1, 1, 1];
+        var sequence = [1, 1, 1];
+        l = 0;
+        m = 0;
+        console.log(array);
+        console.log(sequence);
+
+        function Pro() {
+            for (i = 0; i < array.length; i++) {
+                for (j = 0; j < sequence.length; j++) {
+                    if (sequence[j] == array[i]) {
+                        l++;
+
+                    } else if (sequence[j] == sequence[j + 1]) {
+                        l--;
+                    } else if (sequence[j + 1] == array[j]) {
+                        l--;
+                    }
+                }
+            }
+            if (l == sequence.length) {
+                return true;
+            } else if (l == 15) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        console.log(Pro());
+    </script>
+
+</body>
+
+</html>
